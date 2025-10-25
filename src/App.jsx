@@ -9,7 +9,7 @@ import DualImageShowcase from './components/DualImageShowcase';
 import EditorialTestimonial from './components/EditorialTestimonial';
 import PartnerLogoBar from './components/PartnerLogoBar';
 import CtaBanner from './components/CtaBanner';
-import Footer from './components/Footer'; 
+import Footer from './components/footer'; 
 
 function App() {
   return (
