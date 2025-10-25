@@ -1,0 +1,137 @@
+/* -------------------------------------------
+   1. GLOBAL FONT & BASE STYLING
+   ------------------------------------------- */
+body {
+  /* Sora for body text, as requested */
+  font-family: 'Sora', sans-serif;
+  color: #333; /* Dark gray for main text */
+  background-color: #f7f7f7; /* Off-white background */
+  overflow-x: hidden; /* Prevent horizontal scroll from absolute elements */
+}
+
+/* Montserrat for Headings, as requested */
+h1, h2, h3, h4, h5, h6, .fw-bold, .text-uppercase {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700 !important; /* Ensure headings are bold */
+  color: #1a1a1a;
+}
+
+/* Base link styling */
+a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #555;
+}
+
+/* Utility Class for secondary, muted text */
+.text-secondary, .text-muted, p {
+  color: #6c757d !important;
+  font-weight: 400;
+}
+
+/* -------------------------------------------
+   2. BOOTSTRAP OVERRIDES & CUSTOM CLASSES
+   ------------------------------------------- */
+
+/* Navbar & Buttons */
+.navbar-brand img {
+  filter: brightness(0.2); /* Make the logo slightly darker than default */
+}
+
+.btn-dark {
+  background-color: #1a1a1a;
+  border-color: #1a1a1a;
+  color: white;
+}
+
+.btn-outline-secondary {
+  color: #6c757d;
+  border-color: #ced4da;
+}
+
+/* -------------------------------------------
+   3. SECTION SPECIFIC STYLES
+   ------------------------------------------- */
+
+/* Hero Image Grid Section */
+.hero-image-grid-section {
+  padding-top: 8rem !important;
+  padding-bottom: 8rem !important;
+}
+
+/* Brand Story Section (AETHERIA logo) */
+.brand-story-section img {
+  /* Ensures the gray AETHERIA logo is large and visually distinct */
+  max-width: 90%; 
+  height: auto;
+  opacity: 0.9;
+}
+
+/* Category & Dual Showcase Cards */
+.card {
+  border: none !important;
+}
+
+.card .text-muted.small {
+  /* Smaller font for subtitles */
+  font-size: 0.85rem !important;
+}
+
+/* Dual Image Showcase - Hover Effect */
+.hover-grow {
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Applying a subtle zoom/grow effect on hover to the image container */
+.hover-grow:hover {
+  transform: scale(1.02);
+}
+
+/* Editorial/Testimonial Section (Signature Image) */
+.signature-area img {
+  /* Makes sure the signature is dark and clear */
+  filter: invert(0); 
+}
+
+/* CTA Banner (Sunglasses) */
+.cta-banner .position-relative {
+  /* Gives the banner a definite structure and shadow */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* -------------------------------------------
+   4. FOOTER STYLING
+   ------------------------------------------- */
+
+/* General Footer Look */
+footer {
+  background-color: #1a1a1a !important; /* Very dark background */
+  color: #f8f9fa;
+}
+
+/* Footer's Huge AETHERIA Text */
+footer h1 {
+  /* Override the default color for the complex gradient/stroke effect */
+  -webkit-text-stroke: 1px #444; /* Darker stroke for contrast on black */
+  opacity: 0.6;
+}
+
+/* Footer Navigation Links */
+footer .nav-link {
+  color: #ccc !important;
+  padding: 0; /* Remove default Nav.Link padding */
+  margin-bottom: 0.5rem; /* Reintroduce vertical spacing */
+}
+
+/* Footer Bottom Bar (Legal Links) */
+footer .border-top {
+  border-color: #333 !important; /* Light border separator */
+}
+
+footer small, footer .nav-link[style*="font-size: 0.8rem"] {
+  color: #999 !important; /* Muted legal text */
+}
