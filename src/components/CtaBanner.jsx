@@ -28,14 +28,14 @@ const CtaBanner = () => {
               
               {/* Button Overlay - Centered at the bottom half */}
               <div 
-                className="position-absolute top-0 w-100 h-100 d-flex justify-content-center align-items-end p-5"
+                className="position-absolute top-0 w-100 h-100 d-flex justify-content-center align-items-end p-5 "
                 style={{ pointerEvents: 'none' }} // Allow clicks only on the button, not the whole div
               >
                 <Button 
                   variant="light" 
                   size="sm" 
                   className="rounded-0 text-uppercase fw-bold"
-                  style={{ pointerEvents: 'auto' }} // Re-enable clicks for the button itself
+                  style={{ pointerEvents: 'auto', fontSize:'10px' }} // Re-enable clicks for the button itself
                 >
                   JOIN THE DROP
                 </Button>

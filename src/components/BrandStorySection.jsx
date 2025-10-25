@@ -6,19 +6,19 @@ import AetheriaLogo from '../assets/logo/aetherialogo.png'
 const BrandStorySection = () => {
   return (
     <section className="brand-story-section py-5 my-5">
-      <Container>
+      <Container style={{backgroundColor:'#f7f7f7', borderRadius:'8px'}}>
         <Row className="align-items-center">
           
           {/* Left Column: Text Content */}
           <Col md={6}>
             <div className="p-3 p-md-5">
-              <h3 className="mb-4 fw-bold">The Code of Unapologetic Style</h3>
+              <h3 className="mb-4 fw-bold sm-js">The Code of Unapologetic Style</h3>
               
-              <p className="mb-4 text-secondary">
+              <p className="mb-4 text-secondary sm-js">
                 Crafted for creators, rebels, and dreamers — Aetheria represents a culture of expression. Every stitch, silhouette, and tone reflects a story of contrast: street meets sophistication, raw meets refined.
               </p>
               
-              <p className="text-secondary">
+              <p className="text-secondary sm-js">
                 Bold, modern, and cinematic — Aetheria clothes transcend fashion to become a movement. Step into unapologetic confidence with each piece you wear.
               </p>
             </div>

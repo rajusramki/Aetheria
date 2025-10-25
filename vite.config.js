@@ -1,7 +1,8 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
-// https://vite.dev/config/
+// Replace <repo-name> with your GitHub repository name
 export default defineConfig({
+  base: '/Aetheria/',
   plugins: [react()],
-})
+});

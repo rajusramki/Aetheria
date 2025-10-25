@@ -6,8 +6,8 @@ import CeoSignature from '../assets/ceosignature.png'
 
 const EditorialTestimonial = () => {
   return (
-    <section className="editorial-testimonial py-5 my-5 bg-white">
-      <Container>
+    <section className="editorial-testimonial py-5 my-5 bg-white" >
+      <Container style={{backgroundColor:'#f7f7f7', borderRadius:'8px'}}>
         <Row className="align-items-center justify-content-center">
           
           {/* Left Column: Text Content and Signature */}
@@ -15,15 +15,15 @@ const EditorialTestimonial = () => {
             <div className="p-3 p-md-5">
               <h3 className="mb-4 fw-bold">The Aetheria Edit</h3>
               
-              <p className="text-secondary mb-3">
+              <p className="text-secondary mb-3 sm-js">
                 Visual storytelling meets design precision. From city lights to timeless silhouettes — experience fashion beyond the surface.
               </p>
               
-              <p className="text-secondary mb-3">
+              <p className="text-secondary mb-3 sm-js">
                 Editorial images highlight sharp contrasts, glassy overlays, and a neon-lit perspective, offering a magazine-quality journey through the world of Aetheria.
               </p>
               
-              <p className="text-secondary mb-5">
+              <p className="text-secondary mb-5 sm-js">
                 Each frame evokes mood, movement, and the allure of the street, all refined with premium aesthetics.
               </p>
               

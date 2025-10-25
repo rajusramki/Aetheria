@@ -28,7 +28,7 @@ const DualImageShowcase = () => {
             <Col md={6} key={index} className="mb-4">
               {/* 🚨 FIX: Card class updated to border-0 (no border) */}
               {/* Added shadow-sm back to the Card to simulate the card container shadow */}
-              <Card className="border-0" style={{ overflow: 'visible' }}>
+              <Card className="border-0" style={{ overflow: 'visible'}}>
                 <a href={item.link} aria-label={`View ${item.title}`} className="text-decoration-none text-dark">
                   
                   {/* Image Wrapper: Applies overflow:hidden and the rounded corners/shadow to the image block */}
@@ -37,7 +37,6 @@ const DualImageShowcase = () => {
                       height: '400px', 
                       overflow: 'hidden', 
                       borderRadius: '8px', // Apply rounding
-                      boxShadow: '0 4px 8px rgba(0,0,0,0.1)' // Optional subtle shadow on the image container
                     }} 
                     className="hover-grow" // Custom class for hover effect
                   >
@@ -46,7 +45,7 @@ const DualImageShowcase = () => {
                       src={item.image} 
                       alt={item.title} 
                       className="rounded-0" // Image itself is not rounded, the wrapper handles it
-                      style={{ objectFit: 'cover', height: '100%', width: '100%' }}
+                      style={{ objectFit: 'cover', height: '100%', width: '100%'}}
                     />
                   </div>
                 </a>
