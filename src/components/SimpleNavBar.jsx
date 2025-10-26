@@ -5,53 +5,80 @@ import { Container, Nav, Button, Row, Col, Navbar } from 'react-bootstrap';
 // Assuming your logo is correctly placed and imported
 import AetheriaLogo from '../assets/logo/logo.png'; 
 
+// --- CSS Keyframes and Styles for the Drop-Down Fade-In Animation ---
+const styles = `
+    /* Keyframes for a smooth fade-in and slight drop-down */
+    @keyframes navDropDown {
+        from {
+            transform: translateY(-20px); /* Start slightly above its final position */
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    /* Base class for the animated container */
+    .animated-navbar {
+        animation: navDropDown 0.6s ease-out forwards; /* Apply animation */
+        opacity: 0; /* Initial state (will be overridden by 'to' in the keyframe) */
+        will-change: transform, opacity; /* Optimization for smooth animation */
+    }
+
+    /* Basic button hover for elegance */
+    .navbar-button:hover {
+        background-color: #333 !important;
+        transition: background-color 0.2s;
+    }
+`;
+
 const SimpleNavBar = () => {
-  return (
-    <Container className="py-4">
-      {/* The entire bar is enclosed in a box with a subtle border/shadow */}
-      <div className="border p-3">
-        <Row className="align-items-center justify-content-between">
-          
-          {/* Left Section: Nav Links (Visible only on Desktop/md+) */}
-          {/* Use d-none to hide on mobile, and d-md-block to show on desktop */}
-          <Col xs={4} className="d-none d-md-block">
-            <Nav className="gap-4">
-              <Nav.Link href="#aetheria" className="text-dark fw-bold px-0">
-                Aetheria
-              </Nav.Link>
-              <Nav.Link href="#about" className="text-dark px-0">
-                About
-              </Nav.Link>
-            </Nav>
-          </Col>
+    return (
+        // The animation is applied to the outer Container, which also sets the sticky position
+        <Container className="py-4 sticky-top">
+            <style>{styles}</style> 
+            
+            {/* Apply the animated-navbar class to the rounded div */}
+            <div className="rounded-1 border p-3 bg-white animated-navbar"> 
+                <Row className="align-items-center justify-content-between">
+                    
+                    {/* Left Column (Desktop Links) */}
+                    <Col xs={4} className="d-none d-md-block">
+                        <Nav className="gap-4">
+                            <Nav.Link href="#aetheria" className="text-dark fw-bold px-0">
+                                About
+                            </Nav.Link>
+                            {/* Add more links here if needed */}
+                        </Nav>
+                    </Col>
 
-          {/* Center Section: Logo Image */}
-          {/* On mobile (xs), the logo takes 6 columns and is centered. 
-              On desktop (md+), it takes the full 4 columns and is centered. */}
-          <Col xs={2} md={4} className="text-center">
-            {/* We can use a simple <a> tag instead of Navbar.Brand since we're not using the full Navbar */}
-            <a href="#home" className="navbar-brand">
-              <img 
-                src={AetheriaLogo} 
-                alt="Aetheria Logo" 
-                style={{ height: '40px', width: 'auto' }} 
-                className="d-inline-block align-top"
-              />
-            </a>
-          </Col>
+                    {/* Center Column (Logo) */}
+                    <Col xs={2} md={4} className="text-center">
+                        <a href="#home" className="navbar-brand">
+                            <img 
+                                src={AetheriaLogo} 
+                                alt="Aetheria Logo" 
+                                style={{ height: '40px', width: 'auto' }} 
+                                className="d-inline-block align-top"
+                            />
+                        </a>
+                    </Col>
 
-          {/* Right Section: CTA Button */}
-          {/* On mobile (xs), the button takes 6 columns and is aligned right, balancing the logo.
-              On desktop (md+), it takes 4 columns and is aligned right. */}
-          <Col xs={6} md={4} className="text-end">
-            <Button variant="dark" className="rounded-0 text-uppercase px-4 py-2" style={{fontSize:'10px'}}>
-              JOIN THE DROP
-            </Button>
-          </Col>
-        </Row>
-      </div>
-    </Container>
-  );
+                    {/* Right Column (CTA Button) */}
+                    <Col xs={6} md={4} className="text-end">
+                        <Button 
+                            variant="dark" 
+                            className="rounded-1 text-uppercase px-4 py-2 navbar-button" 
+                            style={{fontSize:'10px'}}
+                        >
+                            JOIN THE DROP
+                        </Button>
+                    </Col>
+                </Row>
+            </div>
+        </Container>
+    );
 };
 
 export default SimpleNavBar;

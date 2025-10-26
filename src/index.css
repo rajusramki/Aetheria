@@ -4,6 +4,7 @@
 body {
   /* Sora for body text, as requested */
   font-family: 'Sora', sans-serif;
+  letter-spacing: -1px;
   color: #333; /* Dark gray for main text */
   overflow-x: hidden; /* Prevent horizontal scroll from absolute elements */
 }
